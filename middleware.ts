@@ -6,6 +6,7 @@ export default withAuth(
         //console.log(request) 
     }, {
     isReturnToCurrentPage: true,
+    publicPaths: ["/about"],
 }
 )
 
