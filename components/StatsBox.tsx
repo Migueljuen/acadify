@@ -5,12 +5,12 @@ function StatsBox() {
     const { ref, inView } = useInView({ triggerOnce: true });
 
     return (
-        <div ref={ref} className="w-full bg-[#2ca58d]/5 dark:bg-[#2ca58d]/30  h-[600px] text-display dark:text-[#ededed]">
+        <div ref={ref} className="w-full bg-[#2ca58d]/5  dark:bg-[#2ca58d]/30  h-[700px] xl:h-[600px] text-display dark:text-[#ededed]">
             <div className="max-w-[1440px] w-[90%] mx-auto h-full flex flex-col justify-center">
                 <AnimatedSection>
                     <p className="text-sm px-3 py-1 rounded-xs">IMPACT</p>
                     <p className="text-4xl font-display">Acadify at a Glance</p>
-                    <div className="flex flex-row gap-4 mt-10 text-black/70 dark:text-[#ededed]">
+                    <div className="grid grid-cols-2 xl:grid-cols-4 gap-4 mt-10 text-black/70 dark:text-[#ededed]">
                         <div className="box w-full h-52 bg-[#2ca58d]/30  dark:bg-[#2ca58d] rounded-md flex flex-col justify-evenly px-8">
                             <p className="text-6xl font-semibold">
                                 +{inView && <CountUp end={1200} duration={4} separator="," />}

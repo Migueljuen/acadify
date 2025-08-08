@@ -4,8 +4,11 @@
 
 @custom-variant dark (&:is(.dark *));
 
+
 @theme inline {
+
   --font-display: "Bricolage Grotesque", sans-serif;
+  --font-size-fluid: clamp(1.5rem, 8vw, 2.25rem);
   --color-secondary: #457b9d;
   --color-display: #0a2342;
   --color-background: var(--background);
@@ -45,6 +48,10 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+}
+
+@utility heading-fluid {
+  font-size: clamp(1.8rem, 8vw, 5.25rem);
 }
 
 :root {

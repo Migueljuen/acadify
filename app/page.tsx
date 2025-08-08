@@ -1,39 +1,3 @@
-// 'use client'
-
-// import { Button } from "@/components/ui/button"
-// import Header from "@/components/ui/header"
-// import { motion } from 'framer-motion'
-
-
-
-// export default function Home() {
-//   return (
-//     <>
-//       <motion.div
-//         initial={{ opacity: 0 }}
-//         animate={{ opacity: 1 }}
-//         transition={{ duration: .4 }}
-//       >
-//         {/* Header */}
-//         <Header />
-
-
-//         <main>
-//           {/* hero */}
-/* <section className="flex flex-col justify-center items-center text-center h-[880px] ">
-            <h1 className="text-8xl font-extrabold font-display text-display dark:text-[#ededed]">Find the <span className="bg-[#2ca58d]">Right</span> Tutor.<br /> Anytime, Anywhere.</h1>
-            <p className="text-3xl font-secondary text-primary dark:text-[#ededed] mt-8 my-12 tracking-tight ">Connect with peer tutors who understand your needs.<br />
-              Booking a session takes just a few clicks.</p>
-            <Button className="bg-display px-12 py-6 text-gray-50 text-lg">Try now!</Button>
-            <p className="pt-6"> Hassle-free booking process.</p>
-          </section> */
-
-
-//         </main>
-//       </motion.div >
-//     </>
-//   )
-// }
 
 'use client'
 
@@ -62,17 +26,25 @@ export default function Home() {
 
 
         <main>
+          {/* hero */}
+          <AnimatedSection >
+            <section className="flex flex-col justify-center items-center text-center h-[880px] relative overflow-hidden ">
 
-          <AnimatedSection>
-            <section className="flex flex-col justify-center items-center text-center h-[880px] ">
-              <h1 className="text-8xl font-extrabold font-display text-display dark:text-[#ededed]">Study Smarter with<br /> <span className="bg-[#2ca58d]">Acadify</span>.</h1>
-              <p className="text-3xl font-secondary text-primary dark:text-[#ededed] mt-8 my-12 tracking-tight ">Instant Access to Student-Made Resources.<br />
+
+              <h1 className="heading-fluid font-extrabold font-display z-10 text-display dark:text-[#ededed]">Study Smarter with<br /> <span className="bg-[#2ca58d]">Acadify</span>.</h1>
+              <p className="text-2xl xl:text-3xl font-secondary text-primary z-10 dark:text-[#ededed] mt-8 my-12 tracking-tight ">Instant Access to Student-Made Resources.<br />
                 Booking a session takes just a few clicks.</p>
-              <Button className="bg-display dark:bg-[#2ca58d] px-12 py-6 text-gray-50 text-lg">Try now!</Button>
-              <p className="pt-6"> Hassle-free process.</p>
+
+              <Button className="bg-display dark:bg-[#2ca58d] z-10 px-12 py-6 text-gray-50 text-lg">Try now!</Button>
+              <p className="pt-6 z-10"> Hassle-free process.</p>
+
+              <div className="shits  w-full h-full absolute blur-[8rem] hidden dark:block ">
+                <div className="size-3/4 bg-yellow-400/1 absolute left-0 -bottom-24 rounded-tr-full rounded-tl-full"></div>
+                <div className="size-3/4 bg-green-400/0 absolute right-0 -bottom-24 rounded-tl-full "></div>
+              </div>
+
             </section>
           </AnimatedSection>
-          {/* statistics */}
 
           <StatsBox />
 
@@ -95,13 +67,14 @@ export default function Home() {
                 </div>
               </div>
 
-              <p className="text-3xl font-secondary text-primary  max-w-[1440px] w-[90%] mt-4 dark:text-[#edededc0]"> Why spend endless hours buried in textbooks when you can learn the same material in a fraction of the time? Acadify helps you focus on what matters, so you retain more in less time.</p>
+              <p className="text-xl font-secondary text-primary  max-w-[1440px] w-[90%] mt-4 dark:text-[#edededc0]"> Why spend endless hours buried in textbooks when you can learn the same material in a fraction of the time? Acadify helps you focus on what matters, so you retain more in less time.</p>
             </section>
           </AnimatedSection>
 
         </main>
-        <div className="w-full bg-[#2ca58d]/5  dark:bg-[#2ca58d]/30">
-          <footer className="max-w-[1280px] w-90% mx-auto  h-[700px] flex flex-col items-center justify-evenly gap-12 ">
+        {/* footer*/}
+        <footer className="w-full bg-[#2ca58d]/5  dark:bg-[#2ca58d]/30">
+          <div className="max-w-[1280px] w-90% mx-auto  h-[700px] flex flex-col items-center justify-evenly gap-12 ">
             <div className="flex flex-row gap-12  w-full">
               <p className="text-5xl font-semibold font-display text-display dark:text-[#ededed]">Subscribe to our newsletter <br /> for important updates</p>
               <div className="">
@@ -139,8 +112,8 @@ export default function Home() {
                 <p>Privacy Policy</p>
               </div>
             </div>
-          </footer>
-        </div>
+          </div>
+        </footer>
       </motion.div >
     </>
   )
